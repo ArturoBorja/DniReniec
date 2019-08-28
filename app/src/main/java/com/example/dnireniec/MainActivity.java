@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,8 +33,11 @@ public class MainActivity extends AppCompatActivity {
         btn_consulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txt_name.setText(ConsultaDni(ext_dni.getText().toString()));
+                resultado=Ordenar(ConsultaDni(ext_dni.getText().toString()));
                 //txt_name.setText(ext_dni.getText());
+                if (ext_dni.getText().toString().equals("47656175")){
+                    txt_name.setText("LA MAS BONITA "+resultado);
+                }
             }
         });
     }
@@ -62,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
         }catch (IOException ex){
             Log.e("dni", ex.toString());
         }
+        return a;
+    }
+    public static String Ordenar(String a){
+        String [] name;
+        name =a.split(Pattern.quote("|"));
+         a = name[2]+", "+name[0]+" "+name[1];
+
         return a;
     }
 
