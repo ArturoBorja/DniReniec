@@ -10,10 +10,10 @@
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hjgftrdhfgbhj"
+        android:text="HOLA"
         android:textSize="24sp"
         android:textAllCaps="true"
-
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="DNI"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_name"
@@ -43,5 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ext_dni" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

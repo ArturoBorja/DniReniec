@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 resultado=Ordenar(ConsultaDni(ext_dni.getText().toString()));
-                //txt_name.setText(ext_dni.getText());
+                txt_name.setText(resultado);
                 if (ext_dni.getText().toString().equals("47656175")){
                     txt_name.setText("LA MAS BONITA "+resultado);
                 }
